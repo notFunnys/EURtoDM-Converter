@@ -25,11 +25,9 @@ function getAttractivePrice(normalizedValue) {
     let integerPart = Math.floor(price);
     let fractionalPart = price - integerPart;
 
-    // Wenn der Dezimalteil 0,50 oder mehr ist, auf 0,99 runden
     if (fractionalPart >= 0.50) {
         roundedPrice = integerPart + 0.99;
     } else {
-        // Wenn der Dezimalteil unter 0,50 ist, auf 0,49 runden
         roundedPrice = integerPart + 0.49;
     }
 
