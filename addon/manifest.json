@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Euro zu D-Mark Konverter",
+  "version": "1.0",
+  "description": "Konvertiert Euro-Beträge in historische Währungen.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["index.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
